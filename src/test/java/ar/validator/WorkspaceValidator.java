@@ -6,7 +6,11 @@ import org.testng.Assert;
 
 public class WorkspaceValidator {
         public static void validate(){
+            //Realizamos las validaciones correspondientes
             WorkspacesResponse[] response = (WorkspacesResponse[]) APIManager.getLastResponse().getResponse();
-            Assert.assertNotNull(response[0].getId(),"El campo ID es nulo");
+            for (WorkspacesResponse Work: response) {
+                String id = Work.getId();
+                Assert.assertNotNull(id,"El campo ID es nulo");
+            }
         }
 }
