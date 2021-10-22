@@ -5,6 +5,8 @@ import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import services.BaseService;
+import services.WorkspaceService;
+import services.WorkspaceSinParametroService;
 
 public class WorkspaceSteps extends PageSteps {
 
@@ -21,5 +23,10 @@ public class WorkspaceSteps extends PageSteps {
     @Given("X-Api-Key invalido")
     public void xApiKeyInvalido() {
         BaseService.API_KEY.set("NDRmZWUwYzEtOTZhMS00NDk5LWJkZWItY2FiNmY1MjQ3NGN");
+    }
+
+    @Given("un api key valido")
+    public void unApiKeyValido() {
+        WorkspaceSinParametroService.API_KEY.set("NDRmZWUwYzEtOTZhMS00NDk5LWJkZWItY2FiNmY1MjQ3NGNh");
     }
 }

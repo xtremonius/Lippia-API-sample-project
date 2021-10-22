@@ -13,12 +13,15 @@ Feature: Workspace
   #6) Controlar la ruta del jsn y el entity en los Examples
   #7) Ejecutar la prueba -> mvn -P Local "-Dcucumber.tags=@WorkspaceSinParametro" test
 
-  @Success
-  Scenario Outline: Consulta Workspace resultado exitoso sin Parametros
+
     #Given Mi cuenta creada en clockify y mi X-Api-Key geneada --> va directo al JSN
-    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
+
     #una ves que se ejecuta este step ^ accedemos a la respuesta con APIManager.getLastResponse().getResponse()
     #Ejemplo en src/test/java/ar/validator/WorkspaceValidator.java
+  @Success
+  Scenario Outline: Consulta Workspace resultado exitoso sin Parametros
+    Given un api key valido
+    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     And se obtuvo el status code <status>
     Then Obtengo los datos de mi Workspace
     @WorkspaceSinParametro
