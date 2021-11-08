@@ -7,6 +7,6 @@ import org.testng.Assert;
 public class ProjectValidator {
     public static void validate(String name){
         ProjectResponse response = (ProjectResponse) APIManager.getLastResponse().getResponse();
-        Assert.assertEquals(name,response.getName(),"Nombre de proyecnto no coincide");
+        Assert.assertEquals(name,response.getName(),"Nombre de proyecto no coincide");
     }
 }

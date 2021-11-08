@@ -5,6 +5,9 @@ import api.model.UserCreated;
 import com.crowdar.api.rest.MethodsService;
 import com.crowdar.api.rest.Response;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class UserService extends MethodsService {
 
@@ -15,5 +18,7 @@ public class UserService extends MethodsService {
     public static Response post(String jsonName) {
         return post(jsonName, UserCreated.class);
     }
+
+
 
 }

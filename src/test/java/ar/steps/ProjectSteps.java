@@ -8,6 +8,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import services.BaseService;
 import services.ProjectModificarService;
+import services.ProjectService;
+import services.WorkspaceService;
 
 public class ProjectSteps extends PageSteps {
 
@@ -23,12 +25,17 @@ public class ProjectSteps extends PageSteps {
 
     @And("un id workspace valido")
     public void unIdWorkspaceValido() {
-        BaseService.ID_WORKSPACE.set("616dc9e0747e1a1f68147c87");
+        WorkspaceService.ID_WORKSPACE.set("618154b36dfb2f271e0ebc6f");
     }
 
     @And("guardo el id del proyecto")
     public void guardoElIdDelProyecto() {
         ProjectResponse response = (ProjectResponse) APIManager.getLastResponse().getResponse();
-        ProjectModificarService.ID_P.set(response.getId());
+        ProjectService.ID_P.set(response.getId());
+    }
+
+    @And("un id project valido")
+    public void unIdProjectValido() {
+        ProjectService.ID_PROJECT.set("618194f0f2b31e2d3274c95a");
     }
 }

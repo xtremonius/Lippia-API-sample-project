@@ -2,11 +2,12 @@ package api.model.workspace;
 
 public class Membership {
     private String userId;
-    private String hourlyRate;
-    private String costRate;
+    //private String hourlyRate;
+    private CostRate costRate;
     private String targetId;
     private String membershipType;
     private String membershipStatus;
+    private HourlyRate hourlyRate;
 
     public String getUserId() {
         return userId;
@@ -16,21 +17,25 @@ public class Membership {
         this.userId = userId;
     }
 
-    public String getHourlyRate() {
-        return hourlyRate;
-    }
+    public HourlyRate getHourlyRate() { return hourlyRate; }
 
-    public void setHourlyRate(String hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }
+    public void setHourlyRate(HourlyRate hourlyRate) { this.hourlyRate = hourlyRate; }
 
-    public String getCostRate() {
-        return costRate;
-    }
+//    public String getHourlyRate() {
+//        return hourlyRate;
+//    }
 
-    public void setCostRate(String costRate) {
-        this.costRate = costRate;
-    }
+//    public void setHourlyRate(String hourlyRate) {
+//        this.hourlyRate = hourlyRate;
+//    }
+
+//    public String getCostRate() {
+//        return costRate;
+//    }
+//
+//    public void setCostRate(String costRate) {
+//        this.costRate = costRate;
+//    }
 
     public String getTargetId() {
         return targetId;
@@ -55,4 +60,8 @@ public class Membership {
     public void setMembershipStatus(String membershipStatus) {
         this.membershipStatus = membershipStatus;
     }
+
+    public CostRate getCostRate() { return costRate; }
+
+    public void setCostRate(CostRate costRate) { this.costRate = costRate; }
 }

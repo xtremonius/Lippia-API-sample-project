@@ -11,6 +11,31 @@ public enum EntityConfiguration {
         }
 
     },
+    USER_LOGGED {
+        @Override
+        public Class<?> getEntityService() { return UserloggedService.class; }
+
+    },
+    TIME_ENTRIES_ON_WORKSPACE {
+        @Override
+        public Class<?> getEntityService() { return TimeEntriesService.class; }
+
+    },
+    ADD_TIME_ENTRY_TO_WORKSPACE {
+        @Override
+        public Class<?> getEntityService() { return TimeEntriesService.class; }
+
+    },
+    UPDATE_TIME_ENTRY_TO_WORKSPACE {
+        @Override
+        public Class<?> getEntityService() { return TimeEntriesService.class; }
+
+    },
+    DELETE_TIME_ENTRY_FROM_WORKSPACE {
+        @Override
+        public Class<?> getEntityService() { return TimeEntriesService.class; }
+
+    },
     RESPONSE_HEADERS {
         @Override
         public Class<?> getEntityService() {

@@ -9,6 +9,8 @@ import java.util.Map;
 
 public class ProjectService extends BaseService{
 
+    public static final ThreadLocal<String> ID_P = new ThreadLocal<String>();
+
     public static Response post(String jsonName) {
         return post(jsonName, ProjectResponse.class,setParams());
     }

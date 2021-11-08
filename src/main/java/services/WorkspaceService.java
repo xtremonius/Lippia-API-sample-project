@@ -9,6 +9,8 @@ import java.util.Map;
 
 public class WorkspaceService extends BaseService {
 
+    public static final ThreadLocal<String> ID_WORKSPACE = new ThreadLocal<String>();
+
     public static Response get(String jsonName) {
         return get(jsonName, WorkspacesResponse[].class,setParams());
     }
