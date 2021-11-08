@@ -1,6 +1,6 @@
 Feature: Integrador
   COMO alumno de Crowdar
-  QUIERO resolver los 5 puntos del Ejercicio Integrador
+  QUIERO resolver los 5 puntos del Ejercicio Integrador de API
 
 
   @IntegradorApi
